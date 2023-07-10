@@ -4,9 +4,8 @@
   "description": "",
   "scripts": {
     "build:dev": "webpack --mode=development",
-    "build:prod": "rm -rf build && webpack --mode=production --node-env=production",
-    "init": "npm install",
-    "start": "npm run build:dev && node build/server.bundle.js"
+    "build:prod": "yarn install --force && rm -rf build && webpack --mode=production --node-env=production",
+    "start": "yarn run build:dev && node build/server.bundle.js"
   },
   "repository": {
     "type": "git",
