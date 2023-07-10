@@ -1,0 +1,30 @@
+{
+  "name": "react-streaming",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build:dev": "webpack --mode=development --stats-error-details",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "start": "npm run build:dev && node build/server.bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:bassuff/react-streaming.git"
+  },
+  "author": "Axel Winter <mail@axelwinter.de> (https://react-streaming.axelwinter.de/)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.18.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.22.8",
+    "@babel/preset-env": "7.22.7",
+    "@babel/preset-react": "7.22.5",
+    "@webpack-cli/generators": "3.0.7",
+    "babel-loader": "9.1.3",
+    "webpack": "5.88.1",
+    "webpack-cli": "5.1.4"
+  }
+}
