@@ -2,22 +2,22 @@ import React, {lazy, Suspense} from 'react';
 import {Html} from './Html.jsx';
 import {Loading} from './components/Loading.jsx';
 
-const Sidebar = lazy(
+const Red = lazy(
   () =>
     new Promise((resolve) => {
-      setTimeout(() => resolve(import('./components/Sidebar.jsx' /* webpackPrefetch: true */)), 1000);
+      setTimeout(() => resolve(import('./components/Red.jsx' /* webpackPrefetch: true */)), 1000);
     })
 );
-const Main = lazy(
+const Green = lazy(
   () =>
     new Promise((resolve) => {
-      setTimeout(() => resolve(import('./components/Main.jsx' /* webpackPrefetch: true */)), 2000);
+      setTimeout(() => resolve(import('./components/Green.jsx' /* webpackPrefetch: true */)), 2000);
     })
 );
-const Extra = lazy(
+const Blue = lazy(
   () =>
     new Promise((resolve) => {
-      setTimeout(() => resolve(import('./components/Extra.jsx' /* webpackPrefetch: true */)), 3000);
+      setTimeout(() => resolve(import('./components/Blue.jsx' /* webpackPrefetch: true */)), 3000);
     })
 );
 
@@ -25,13 +25,15 @@ export const App = () => {
   return (
     <Html>
       <Suspense fallback={<Loading />}>
-        <Sidebar></Sidebar>
-        <Suspense fallback={<Loading />}>
-          <Main></Main>
+        <div className="d-flex justify-content-center align-items-center app">
+          <Red />
           <Suspense fallback={<Loading />}>
-            <Extra></Extra>
+            <Green />
+            <Suspense fallback={<Loading />}>
+              <Blue />
+            </Suspense>
           </Suspense>
-        </Suspense>
+        </div>
       </Suspense>
     </Html>
   );

@@ -1,4 +1,5 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const clientConfig = {
   target: 'web',
@@ -13,6 +14,10 @@ const clientConfig = {
         test: /\.(js|jsx)$/i,
         loader: 'babel-loader',
       },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      }
     ],
   },
 };
@@ -30,6 +35,10 @@ const serverConfig = {
         test: /\.(js|jsx)$/i,
         loader: 'babel-loader',
       },
+      {
+        test: /\.css$/i,
+        loader: MiniCssExtractPlugin.loader
+      }
     ],
   },
 };

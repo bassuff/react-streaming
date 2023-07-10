@@ -1,0 +1,57 @@
+:root {
+  --square-size: 10rem;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  min-height: 100vh;
+  background-color: #272c33;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.app {
+  flex-wrap: nowrap;
+  height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.loading {
+  background-color: #fffefe;
+  width: var(--square-size);
+  height: var(--square-size);
+}
+
+.red {
+  background-color: #e78287;
+  width: var(--square-size);
+  height: var(--square-size);
+}
+
+.green {
+  background-color: #a7cb8b;
+  width: var(--square-size);
+  height: var(--square-size);
+}
+
+.blue {
+  background-color: #71bdf2;
+  width: var(--square-size);
+  height: var(--square-size);
+}
