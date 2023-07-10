@@ -5,13 +5,14 @@
   "scripts": {
     "build:dev": "webpack --mode=development",
     "build:prod": "rm -rf build && webpack --mode=production --node-env=production",
+    "install": "npm install",
     "start": "npm run build:dev && node build/server.bundle.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:bassuff/react-streaming.git"
+    "url": "git@github.com:bassuff/react-streaming.git"
   },
-  "author": "Axel Winter <mail@axelwinter.de> (https://react-streaming.axelwinter.de/)",
+  "author": "Axel Winter <mail@axelwinter.de>",
   "license": "MIT",
   "dependencies": {
     "express": "4.18.2",
