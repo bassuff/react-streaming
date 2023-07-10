@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build:dev": "webpack --mode=development",
-    "build:prod": "yarn install --force && rm -rf build && webpack --mode=production --node-env=production",
+    "build:prod": "rm -rf build && webpack --mode=production --node-env=production",
     "start": "yarn run build:dev && node build/server.bundle.js"
   },
   "repository": {
